@@ -1,78 +1,132 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
 // import Card from '../components/Card.astro';
 ---
 
 <Layout title="Welcome to Coco Mio">
-	<main>
-		<h1>Welcome to <span class="text-gradient">Coco Mio</span></h1>
-		<p class="instructions">
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos minima molestiae consequatur laborum, labore asperiores voluptas quis sit delectus repellendus qui distinctio illo veritatis omnis quidem minus alias maxime laudantium?
+  <main>
+    <h1>Welcome to <span class="text-gradient">Coco Mio</span></h1>
+    <div class="main-image">
+      <img src="/CocoMioComingSoon_c.png" alt="Coco Mio: Coming Soon" />
+    </div>
+    <p class="instructions">
+			Coconut products for your plants and garden.
 		</p>
-		<div>
-			<form class="pageclip-form" data-netlify="true" method="post"><!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
-				<label for="email">Email</label>
-				<input type="email" name="email" id="email" placeholder="user@example.com" required="required"/>
-				<label for="message">Let us know a few details about what you’re looking for…</label>
-				<textarea name="message" id="message"></textarea><!-- This button will have a loading spinner. Keep the inner span for best results. -->
-				<button class="button" type="submit"><span>Send</span></button>
-			</form>
-		</div>
-	</main>
+		<p class="instructions">
+			For more information or to get in touch, contact us below. 
+		</p>
+    <div>
+      <form class="pageclip-form" data-netlify="true" method="post">
+        <!-- Replace these inputs with your own. Make sure they have a "name" attribute! -->
+        <label for="email">Email</label>
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="user@example.com"
+          required="required"
+        />
+        <label for="message"
+          >Let us know a few details about what you’re looking for…</label
+        >
+        <textarea name="message" id="message"
+        >
+        </textarea><!-- This button will have a loading spinner. Keep the inner span for best results. -->
+        <button class="button" type="submit"><span>Send</span></button>
+      </form>
+    </div>
+  </main>
 </Layout>
 
 <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
+  main {
+    margin: auto;
+    padding: 1.5rem;
+    max-width: 60ch;
+  }
+  .main-image {
+    max-width: 700px;
+    height: auto;
+  }
+  h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+  /* .text-gradient {
 		background-image: var(--accent-gradient);
 		-webkit-background-clip: text;
 		-webkit-text-fill-color: transparent;
 		background-size: 400%;
 		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
+	} */
+  .instructions {
+    line-height: 1.2;
+    margin: 1.2rem 0;
+		font-size: 1.2em;
+		text-align: center;
+    /* border: 1px solid rgba(var(--accent), 25%); */
+    /* background-color: white; */
+    /* padding: 1rem; */
+    /* border-radius: 0.4rem; */
+  }
+  .instructions code {
+    font-size: 0.875em;
+    font-weight: bold;
+    background: rgba(var(--accent), 12%);
+    color: rgb(var(--accent));
+    border-radius: 4px;
+    padding: 0.3em 0.45em;
+  }
+  .instructions strong {
+    color: rgb(var(--accent));
+  }
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
+
+	form {
+		margin: 2em auto;
+		padding 1em;
 	}
 
-	label {
-		display: block;
-		font-weight: bold;
-		margin-bottom: 0.5rem;
-	}
-	input[type="email"], input[type="text"], textarea {
-		display: block;
-		width: 100%;
-		margin-bottom: 1rem;
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  input[type="email"],
+  input[type="text"],
+  textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 1rem;
+		padding: 1em;
+  }
+
+	button, input[type="submit"] {
+		background-image: none;
+		background-color: transparent;
+		border-radius: 0;
+		box-shadow: none;
+		-webkit-appearance: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		font-family: inherit;
+
+		background-color: #B55934;
+		color: white;
+		padding: 1em 2em;
+		border: none;
 	}
 </style>
